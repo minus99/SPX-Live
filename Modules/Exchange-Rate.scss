@@ -1,0 +1,89 @@
+.kutuKurDegis{ 
+    position: relative;
+    display: none !important;
+    .kutuHeaderKurDegis, .kutuKurDegis_lbfAciklama { display: none; }
+    .kutuKurDegis_pb {
+        > span{
+            cursor: pointer;
+            background: none;
+            letter-spacing: .9px;
+            color: #a0a0a0;
+            font-family: "regular";
+            font-weight: normal;
+            font-size: 13px;
+            border: none;
+            padding: 10px 20px;
+            min-height: 35px;
+            border-right: 1px solid #f2f2f2;
+            position: relative;
+            line-height: inherit;
+            height: inherit;
+            display: inline-block;
+            i.icon-ico_dropdown{
+                font-size: 7px;
+                position: relative;
+                top: -2px;
+                margin-left: 15px;
+                &:before{
+                    font-size: 7px;
+                }
+            }
+        }
+        > ul{
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            z-index: 10;
+            background: #f2f2f2;
+            width: 100%;
+            padding: 10px 10px;
+            li{
+                a{
+                    padding: 10px 10px;
+                    border-top: 1px solid #979797;
+                    display:block;
+                    color: #4a4a4a;
+                    font-size: 13px;
+                    font-weight: normal;
+                    text-align: center;
+                }
+                &:first-child{
+                    a{ border: none; }
+                }
+                &.selected {
+                    a {
+                        background: $btnColor;
+                        color: #fff;
+                        border-bottom-color: $btnColor;
+                    }
+                }
+            }
+        }
+        &.opened{
+            > ul{ display: block; }
+            > span {
+                i {
+                    &:before {
+                        content: '\e90c'; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .kutuKurDegis{ 
+        /*display: none !important;*/ 
+        display: inline-block;
+        float: right;
+        margin-right: 30px; 
+        .kutuKurDegis_pb > span {
+            padding: 10px !important;
+            i.icon-ico_dropdown {
+                margin-right: 5px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.mod-lang { 
+    position: relative;
+    display: none !important;
+    &-header, &-footer{
+        display: none;
+    }
+    .dropdown{
+        > span{
+            cursor: pointer;
+            background: none;
+            letter-spacing: .9px;
+            font-family: $bold;
+            color: $lDark;
+            font-size: 13px;
+            border: none;
+            padding: 8px 5px 8px 5px;
+            line-height: inherit;
+            height: inherit;
+            display: inline-block;
+            b, img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            i {
+                font-size: 7px;
+                position: relative;
+                top: -1px;
+                margin-left: 15px;
+                color: #a0a0a0;
+            }
+        }
+        &.opened{
+            .sub{
+                display: block;
+            }
+            > span {
+                i {
+                    &:before {
+                        content: '\e90c'; 
+                    }
+                }
+            }
+        }
+    }
+    .sub{
+        position: absolute;
+        top: 35px;
+        left: 5px;
+        z-index: 10;
+        background: #f2f2f2;
+        width: 110px; 
+        padding: 0px 10px;
+        li{
+            a{
+                display: block;
+                padding: 10px 0px;
+                border-top: 1px solid #979797;
+                span{
+                    display: block;
+                    img{display: inline-block; margin-right: 10px; float: left;}
+                    b{
+                        display: inline-block !important;
+                        color: #4a4a4a;
+                        font-size: 13px;
+                        font-weight: normal;
+                    }
+                    &#multiIcon-en-US {
+                        b:before {
+                            content:'ENGLISH';
+                            display: inline-block;
+                        }
+                    }
+                    &#multiIcon-tr-TR {
+                        b:before {
+                            content:'TURKISH';
+                            display: inline-block;
+                        }
+                    }
+                    &#multiIcon-ar-AE { 
+                        b:before {
+                            content:'ARABIC';
+                            display: inline-block; 
+                        }
+                    }
+                }
+            }
+            &:first-child{
+                a{ border: none; }
+            }
+            &.selected {
+                a {
+                    span {
+                        font-family: $bold;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .mod-lang{ 
+        float: right;
+        .dropdown > span i {
+            margin-right: 5px !important;
+        }
+    }
+}

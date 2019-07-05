@@ -1,0 +1,415 @@
+.ems-page {
+    &-member{
+        .ems-grid-favorites{ 
+            .ems-grid-header {
+                padding: 5px 0 !important;
+                .col-1{width:100px;}
+                .col-2{width:34%; text-align: left;}
+                .col-3{width:22%;}
+                .col-4{width:22%;}
+                .col-5{width:10%; 
+                    span {
+                        display: none;
+                    }
+                }
+            }
+            .ems-grid-row{
+                text-align: center;
+                padding: 19px 0 !important;
+                .col-1{width:100px;}
+                .col-2{width:34%;}
+                .col-3{width:22%;}
+                .col-4{width:22%;}
+                .col-5{width:10%;}
+                .ems-name{
+                    font-size: 15px;
+                    color: #000;
+                    text-align: left;
+                    font-family: $medium;
+                }
+                a.btnFavoriListeSil{
+                    span {
+                        color: #9b9b9b;
+                    }
+                    i {
+                        &:before {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    &-default-favorites {
+        .ems-grid-row {
+            margin-bottom: -1px;
+        }
+        .ems-page-group-fav {
+            margin:20px 0;
+            display: inline-block;
+            width: 100%;
+        }
+        .select-cfg {
+            a.btnFavoriTumunuSil {
+                padding: 16px 0;
+                font-family: $regular;
+                color: $btnColor;
+                span {
+                    font-size: 13px;
+                    text-decoration: underline;
+                }
+            }
+            .add-selected {
+                margin:0 0 10px 10px;
+                float: right;
+                a {
+                    padding: 10px 17px;
+                    border: 2px solid #000;
+                    background: #000;
+                    span {
+                        font-family: $regular;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .remove-selected {
+                float: right;
+                a {
+                    padding: 10px 17px;
+                    border: 2px solid #000;
+                    background: transparent;
+                    span {
+                        font-family: $regular;
+                        font-size: 13px;
+                        color: #000;
+                    }
+                    &:hover {
+                        background: #000;
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        span[id$="lblFavoriListeSecim"] {
+            margin-bottom: 10px;
+            display: block;
+        }
+        .sStylerMainWrp, .btnSipAra, .drpFavoriListeGruplariYonet {
+            width: 32%;
+            float: left;
+        }
+        .sStylerMainWrp .cStyler {
+            background: #fff;
+            &.checked {
+                background: $btnColor;
+            }
+        }
+        .drpFavoriListeGruplariYonet {
+            a {
+                padding: 10px 0;
+                display: block;
+                color: $btnColor;
+                text-decoration: underline;
+            }
+        }
+        .sStylerWrp {
+            height: 36px !important;
+            padding: 10px 5px 12px 5px !important;
+        }
+        .btnSipAra {
+            padding: 11px 17px;
+            margin: 0 2%;
+            span {
+                font-size: 13px !important;
+                font-weight: normal;
+            }
+        }
+        &-group {
+            .ems-grid-default-favorite-group {
+               background: none !important; 
+               display: inline-block;
+               width: 100%;
+               margin-top: 20px;
+            }
+            .uk-accordion-title {
+                display: flex;
+                justify-content: space-between;
+                border: 1px solid #e5e5e5;
+                padding: 14px;
+                margin-bottom: -1px;
+                width: 100%;
+            }
+            .ems-grid-kazanc {white-space:nowrap; margin-left: 5px;}
+            .page-top-title {float: left;}
+            .ems-new-favorite-group {
+                float: right;
+                padding: 5px 10px;
+                border: 2px solid $btnColor;
+                border-radius: 4px;
+                color: $btnColor;
+                font-family: $medium;
+            }
+            .ems-grid-name {
+                width: 50%;
+                text-align: left;
+                //margin-bottom: 5px; 
+                cursor: pointer; 
+                span {
+                    float: right;
+                }
+                &:before {
+                    content: '+';
+                    font-size: 31px;
+                    color: #000;
+                    float: left;
+                    display: inline-block;
+                    line-height: 14px;
+                    margin-right: 10px;
+                    width: 10px;
+                }
+            }
+            .ems-grid-links {
+                width: 50%;
+                text-align: right;
+                cursor: pointer;
+                > span {
+                    margin-left: 20px;
+                }
+                a {
+                    span {
+                        color: #999999;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .uk-accordion-content {
+                display: none;
+                span {
+                    color: #000;
+                }
+                .ems-message-info {
+                    border: 1px solid $btnColor;
+                    border-radius: 5px;
+                    text-align: center; 
+                    padding: 10px;
+                    margin: 10px 0;
+                    span {
+                        color: $btnColor;
+                    }
+                }
+                .ems-prd-content-bottom {
+                    transform: none !important;
+                    .ems-prd-name {
+                        margin-bottom: 10px;
+                    }
+                }
+                .ems-prd-image > a img {
+                    transform: none !important;
+                }
+                .ems-prd {
+                    padding: 10px 5px;
+                    float: left;
+                }
+                .ems-brand {
+                    margin-bottom: 5px;
+                }
+
+                .ems-prd-cnt {
+                    &#plhFgdSilAction {margin:5px 0;}
+                    &#plhFgdUrunIlkFiyat {text-decoration: line-through;}
+                    a {
+                        span {
+                            color: $btnColor;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .selected {
+                .uk-accordion-content {
+                    display: block;
+                }
+                .ems-grid-name:before {
+                    content: '-';
+                    font-size: 30px;
+                }
+            }
+            .uk-accordion-title {
+               > span.ems-grid-icon {
+                   display: none;
+               }
+            }
+        }
+    }
+}
+.ems-grid-default-favorites {
+    background: none !important;
+
+    a.btnDefault {
+        padding: 11px 17px 11px 17px;
+        span {font-family: $regular; font-size: 14px; text-transform: none;} 
+    }
+
+     .ems-grid-row {
+         padding: 10px !important;
+     }
+     .ems-grid-select {
+         width: 30px;
+         text-align: left !important;
+     }
+     .ems-grid-name {
+         width: 35%;
+         text-align: left !important;
+         > a {
+             font-family: $medium;
+         }
+         span {
+             font-size: 15px !important;
+         }
+     }
+     .ems-grid-addCart {
+        width: 16%;
+     }
+     .ems-grid-piece {
+        padding: 0 10px;
+        input { 
+            border: 0 !important;
+            top: 0 !important;
+            height: 36px !important; 
+         }
+     }
+     .ems-grid-price {
+         .discount {
+             padding: 0px 2px;
+             margin: 3px 0;
+             background: $colorRed;
+             color: #fff;
+             display: inline-block;
+             span {
+                font-size: 13px !important;
+                line-height: 18px;
+             }
+         }
+         .first {
+            text-decoration: line-through;
+            &:empty {
+                display: none;
+            }
+         }
+         &-wrp {
+             > span {
+                 margin-right: 10px;
+             }
+             span[id$="lbfURN_ILKKDVDAHIL"] {
+                 display: none;
+             }
+         }
+     }
+     .ems-grid-remove {
+        width: 30px;
+         a {
+            padding: 0px;
+            text-align: right;
+         }
+         i {
+             color: #ff8600;
+             font-size: 20px;
+         }
+     }
+     .ems-grid-add-group {
+         font-size: 14px;
+         a.btnFavoriGrupEkle {
+             background: none;
+             color: #4a4a4a;
+             text-decoration: underline;
+             display: inline-block;
+             padding: 15px 0;
+         }
+     }
+     .ems-grid-header {display: none !important;}
+}
+
+@media screen and (max-width: $breakpointXSM){
+    .ems-page {
+        &-member{
+            .ems-grid-favorites{
+                .ems-grid-header{
+                    .col-1{
+                        height: 100px !important;
+                    }
+                }
+                .ems-grid-row{
+                    min-height: 140px;
+                    padding-left: 110px !important;
+                    padding-right: 35px !important;
+                    .col-1{
+                        height: 100px !important;
+                    }
+                    .col-2, .col-3, .col-4{width:100%; padding:0;}
+                    .col-5{
+                        width: 12%;
+                        position: absolute;
+                        top: 20px;
+                        right: 0;
+                        z-index: 1;
+                    }
+                }
+            }
+            .ems-page-default-favorites {
+                .ems-grid-row {
+                    .ems-grid-add-group {
+                        height: auto !important;
+
+                    }
+                }
+            }
+        }
+        &-default-favorites {
+            .ems-grid-header {display: inline-block !important;}
+            .ems-page-group-fav {
+                margin: 0 0 20px 0;
+            }
+            .select-cfg {
+                .all-selected {
+                    width: 100%;
+                    text-align: center;
+                }
+                .add-selected, .remove-selected {
+                    margin: 0 0 10px 0px;
+                    width: 100%;    
+                }
+            }
+            .ems-prd-name {
+                max-height: 40px;
+                min-height: 40px;
+            }
+            .sStylerMainWrp, .btnSipAra, .drpFavoriListeGruplariYonet {
+                width: 100%;
+                margin: 0 0 10px 0px;
+                text-align: center;
+            }
+            .ems-grid-default .ems-grid-row .ems-grid-name {height: 100px !important;}
+            .ems-grid-default .ems-grid-header .ems-grid-name {height: 100px !important;}
+            .ems-grid-default .ems-grid-header .ems-grid-report {height: 100px !important;}
+            .ems-grid-header {display: inline-block;}
+            .ems-grid-img {display:none !important;}
+            .ems-grid-name {height: 100px !important;}
+            .ems-grid-default .ems-grid-row .ems-grid-piece {padding: 5px 0 0 20px !important;}
+            .ems-grid-default .ems-grid-row .ems-grid-addCart {padding: 5px 0 0 20px !important;}
+            .ems-grid-default .ems-grid-row .ems-grid-remove {padding: 15px 0 0 20px !important;}
+            .ems-grid-default .ems-grid-row .ems-grid-addCart a {width: auto;}
+            &-group {
+                .uk-accordion-content {
+                    .ems-prd-content-bottom {
+                        .ems-prd-name {
+                            max-height: 40px;
+                            min-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
